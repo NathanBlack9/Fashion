@@ -797,8 +797,19 @@ img {
 		justify-content: flex-end;
 	}
 }
+@media (max-width:1120px){
+	.avone__pic:first-child{
+		margin-right: 3px;
+	}
+	.avone__pic:last-child{
+		margin-left: 3px;
+	}
+}
 
 @media (max-width: 1076px) {
+	.womens, .mens {
+		margin-bottom: 90px;
+	}
 	.womens__item,
 	.mens__item {
 		width: 50%;
@@ -810,3 +821,60 @@ img {
 		margin-top: 5px;
 	}
 }
+@media (max-width: 992px) {
+	.header__inner{
+		display: block;
+		text-align: center;
+	}
+	.header__logo{
+		font-size: 31px;
+	}
+	.header__item:nth-child(2){
+		margin-bottom: 15px;
+	}
+	.avone__images{
+		display: block;
+   		text-align: center;
+	}
+	.avone__pic{
+		width: 100%;
+	}
+	.avone__pic:first-child{
+		margin-bottom: 10px;
+	}
+	.avone__pic:last-child{
+		margin-left: 0;
+	}
+	.tachen{
+		background: url(img/tachen/tachen-bg.svg) -600px 0px / cover no-repeat;
+	}
+}
+@media(max-width:768px){
+	#third__pic{
+		display: none;
+	}
+	.category__btn{
+		left: 36%;
+	}
+	.intro{
+		background: url(img/intro-bg.svg) -295px 0 / cover no-repeat;
+	}
+	.tachen{
+		background: url(img/tachen/tachen-bg.svg) -735px 0px / cover no-repeat;
+	}
+}
+@media(max-width:650px){
+	.header__icons img:first-child{
+		height: 25px;
+	}
+	.header__icons img{
+		height: 30px;
+	}
+	.category__inner{
+		margin: 60px 0;
+	}
+	.womens, .mens{
+		margin-bottom: 50px;
+	}
+}
+
