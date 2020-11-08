@@ -70,7 +70,11 @@ img {
 	color: #22262a;
 	text-decoration: none;
 }
-
+/* for burger */
+#menu__toggle{
+    display: none;
+}
+/* --------- */
 .header__logo {
 	text-decoration: none;
 	color: #22262a;
@@ -683,7 +687,9 @@ img {
 	color: #22262a;
 	padding: 35px 0;
 }
-
+.footer__location-icon{
+	margin-top: 4px;
+}
 /*==============================*/
 /*============MEDIA=============*/
 /*==============================*/
@@ -845,6 +851,9 @@ img {
 	.avone__pic:last-child{
 		margin-left: 0;
 	}
+	#pic1{
+		max-width: 514px;
+	}
 	.tachen{
 		background: url(img/tachen/tachen-bg.svg) -600px 0px / cover no-repeat;
 	}
@@ -858,6 +867,9 @@ img {
 	}
 	.intro{
 		background: url(img/intro-bg.svg) -295px 0 / cover no-repeat;
+	}
+	#blacker{
+		width: 72%;
 	}
 	.tachen{
 		background: url(img/tachen/tachen-bg.svg) -735px 0px / cover no-repeat;
@@ -876,5 +888,255 @@ img {
 	.womens, .mens{
 		margin-bottom: 50px;
 	}
-}
 
+	/* BURGER================== */
+	.nav{
+		display: none;
+	  }
+	  #menu__toggle {
+		opacity: 0;
+	  }
+  
+	  #menu__toggle:checked ~ .menu__btn > span {
+		transform: rotate(45deg);
+	  }
+	  #menu__toggle:checked ~ .menu__btn > span::before {
+		top: 0;
+		transform: rotate(0);
+	  }
+	  #menu__toggle:checked ~ .menu__btn > span::after {
+		top: 0;
+		transform: rotate(90deg);
+	  }
+	  #menu__toggle:checked ~ .nav {
+		visibility: visible;
+		right: 0;
+	  }
+  
+	  .menu__btn {
+		display: flex;
+		align-items: center;
+		position: fixed;
+		top: 20px;
+		right: 20px;
+  
+		width: 26px;
+		height: 26px;
+  
+		cursor: pointer;
+		z-index: 999;
+	  }
+  
+	  .menu__btn > span,
+	  .menu__btn > span::before,
+	  .menu__btn > span::after {
+		display: block;
+		position: absolute;
+  
+		width: 100%;
+		height: 2px;
+  
+		background-color: black;
+  
+		transition-duration: 0.25s;
+	  }
+	  .menu__btn > span::before {
+		content: "";
+		top: -8px;
+	  }
+	  .menu__btn > span::after {
+		content: "";
+		top: 8px;
+	  }
+  
+	  .nav {
+		display: block;
+		position: fixed;
+		visibility: hidden;
+		top: 0;
+		right: -100%;
+  
+		width: 300px;
+		height: 100%;
+  
+		z-index: 998;
+  
+		margin: 0;
+		padding: 80px 0;
+  
+		list-style: none;
+  
+		background-color: white;
+		box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+  
+		transition-duration: 0.25s;
+	  }
+  
+	  .nav__link {
+		display: block;
+		padding: 12px 24px;
+		margin: 0;
+		color: #333;
+  
+		font-family: "Roboto", sans-serif;
+		font-size: 20px;
+		font-weight: 600;
+  
+		text-decoration: none;
+  
+		transition-duration: 0.25s;
+	  }
+	  .nav__link:hover {
+		background-color:#ced9dd;
+		border-bottom: none;
+	  }
+	/* ======================== */
+	.footer__item:first-child{
+		text-align: center;
+	}
+	.footer__mail:after{
+		width: 100%;
+	}
+	.footer__icons{
+		justify-content: center;
+	}
+	.footer__location-icon{
+		display: none;
+	}
+	.footer__location{
+		margin-left: 0;
+	}
+	#blacker{
+		width: 85%;
+	}
+	.input{
+		width: 100%;
+		height: 50px;
+	}
+	.footer__input_link{
+		right: 24px;
+		top: 15px;
+	}
+}
+@media(max-width:550px){
+	.intro__title,
+	.tachen__title{
+		font-size: 60px;
+	}
+	.womens__item, .mens__item{
+		width: 100%;
+	}
+	.womens__shirt, .mens__shirt,
+	.womens__shirt-name, .mens__shirt-name{
+		font-size: 20px;
+		margin-bottom: 10px;
+	}
+	.tachen__prev_subtitle{
+		font-size: 25px;
+	}
+	#pic1{max-width: 100%;}
+	.tachen__btn,
+	.intro__btn{
+		font-size: 20px;
+	}
+	.category__btn{
+		font-size: 21px;
+		left: 33%;
+	}
+	.footer__logo{
+		font-size: 40px;
+	}
+	.footer__mail:after{
+		margin: 10px 0;
+	}
+	.footer__icons a img{
+		width: 40px;
+		height: 40px;
+	}
+	.footer__title{
+		font-size: 30px;
+	}
+	.input,
+	.footer__about_link,
+	.footer__text{
+		font-size: 18px;
+	}
+	.footer__input_link{
+		font-size: 20px;
+	}
+	.under__footer_text{
+		    padding: 0;
+			padding-top: 35px;
+	}
+	.footer{
+		min-height: 100%;
+	}
+}
+@media(max-width:425px){
+	.container{
+		margin: 0px 15px;
+	}
+	.intro{
+		background: url(img/intro-bg.svg) -490px 0 / cover no-repeat;
+	}
+	.intro__inner{
+		padding: 0 15px;
+	}
+	.intro__title{
+		font-size: 50px;
+	}
+	.intro__btn:last-child{
+		margin-left:0;
+	}
+
+	.womens__subtitle, .mens__subtitle{
+		margin-bottom: 35px;
+	}
+	#blacker{
+		width: 100%;
+	}
+	.category__img:first-child{
+		display: none;
+	}
+	.category__inner{
+		margin: 25px 0;
+	}
+	#pic1,
+	#pic2{
+		height: auto;
+	}
+
+	.tachen{
+		background: url(img/tachen/tachen-bg.svg) -975px 0px / cover no-repeat;
+	}
+	.footer__item:last-child{
+		display: none;	
+	}
+	.footer__inner{
+		padding-top: 0;
+		padding-bottom: 0;
+		padding: 90px 0;
+	}
+	.under__footer{
+		padding: 0 15px;
+	}
+}
+@media(max-width:364px){
+	.intro__buttons{
+		display: flex;
+		flex-direction: column;
+	}
+	.intro__btn{
+		display: flex;
+    	flex-direction: column;
+	}
+	.intro__btn:first-child{
+		margin-bottom: 10px;
+	}
+	.category__btn{
+		left: 15%;
+	}
+	.tachen__title{
+		font-size: 50px;
+	}
+}
